@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <section class="hero">
+    <div>
+      <h2>Import & Export solutions for global trade</h2>
+      <p>{{ config.description }}</p>
+      <p><strong>Email:</strong> {{ config.email }}<br>
+      <strong>Phone:</strong> {{ config.phone }}<br>
+      <strong>Address:</strong> {{ config.address }}</p>
+      <a class="button" href="/contact">Contact Us</a>
+    </div>
+    <div>
+      <img src="/{{ config.hero_image }}" alt="GJ Global Enterprises business image">
+    </div>
+  </section>
+
+  <section style="margin-top: 32px;">
+    <h2>Our services</h2>
+    <div class="grid">
+      {% for service in config.services %}
+        <div class="card">
+          <h3>{{ service }}</h3>
+          <p>We provide complete support and management for {{ service.lower() }}.</p>
+        </div>
+      {% endfor %}
+    </div>
+  </section>
+
+  <section style="margin-top: 32px;">
+    <h2>Business showcase</h2>
+    <div class="image-row">
+      {% for image in config.showcase_images %}
+        <img src="/{{ image }}" alt="Business image {{ loop.index }}">
+      {% endfor %}
+    </div>
+  </section>
+{% endblock %}

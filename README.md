@@ -1,1 +1,0 @@
-# gjglobalenterprises
