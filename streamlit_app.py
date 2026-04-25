@@ -2,11 +2,16 @@ import json
 from pathlib import Path
 
 import streamlit as st
+import pandas as pd
+from datetime import date
 
 BASE_DIR = Path(__file__).resolve().parent
 CONFIG_PATH = BASE_DIR / "config.json"
 with open(CONFIG_PATH, "r", encoding="utf-8") as f:
     config = json.load(f)
+
+LOGO_PATH = BASE_DIR / "logo" / "GJ.jpeg"
+BUSINESS_IMAGES = sorted(str(p) for p in BASE_DIR.glob("images/*") if p.is_file())
 
 st.set_page_config(
     page_title=config.get("company_name", "GJ Global Enterprises"),
@@ -16,102 +21,19 @@ st.set_page_config(
 )
 
 st.title(config.get("company_name", "GJ Global Enterprises"))
-st.write(config.get("description", "Import & export services for global trade."))
-
-hero_image = BASE_DIR / config.get("hero_image", "")
-if hero_image.exists():
-    st.image(str(hero_image), use_column_width=True)
-
-page = st.sidebar.selectbox(
-    "Navigate",
-    ["Home", "Services", "Contact"],
-)
-
-if page == "Home":
-    st.header("Welcome")
-    st.write(
-        "GJ Global Enterprises helps importers and exporters move goods across borders with fast customs guidance, freight planning, and shipment tracking."
-    )
-    if config.get("showcase_images"):
-        st.subheader("Business Showcase")
-        images = []
-        for image_path in config["showcase_images"]:
-            full_path = BASE_DIR / image_path
-            if full_path.exists():
-                images.append(str(full_path))
-        if images:
-            st.image(images, caption=[Path(p).stem for p in images], width=300)
-
-elif page == "Services":
-    st.header("Our Services")
-    services = config.get("services", [])
-    if services:
-        for service in services:
-            st.markdown(f"- **{service}**")
-    else:
-        st.write("We provide import/export logistics, customs clearance, and trade documentation services.")
-    st.markdown("---")
-    st.subheader("Company Details")
-    st.write(f"**Website:** {config.get('website', '')}")
-    st.write(f"**Email:** {config.get('email', '')}")
-    st.write(f"**Phone:** {config.get('phone', '')}")
-    st.write(f"**Address:** {config.get('address', '')}")
-
-elif page == "Contact":
-    st.header("Contact Us")
-    st.write("Send us a message and our team will get back to you soon.")
-    with st.form("contact_form"):
-        name = st.text_input("Name")
-        email = st.text_input("Email")
-        message = st.text_area("Message")
-        submitted = st.form_submit_button("Send Message")
-
-        if submitted:
-            st.success("Thank you! Your message has been received.")
-            st.write("**Name:**", name)
-            st.write("**Email:**", email)
-            st.write("**Message:**", message)
-
-    st.markdown("---")
-    st.write("**Contact details**")
-    st.write(f"- Website: {config.get('website', '')}")
-    st.write(f"- Email: {config.get('email', '')}")
-    st.write(f"- Phone: {config.get('phone', '')}")
-    st.write(f"- Address: {config.get('address', '')}")
-
-st.markdown("---")
-st.caption("Built with Streamlit for GJ Global Enterprises")
-from pathlib import Path
-
-import streamlit as st
-import pandas as pd
-from datetime import date
-
-BASE_DIR = Path(__file__).resolve().parent
-LOGO_PATH = BASE_DIR / "logo" / "GJ.jpeg"
-BUSINESS_IMAGES = sorted(str(p) for p in BASE_DIR.glob("images/*") if p.is_file())
-
-st.set_page_config(
-    page_title="GJ Global Enterprises",
-    page_icon="🌍",
-    layout="wide",
-    initial_sidebar_state="expanded",
-)
-
-st.title("GJ Global Enterprises")
 st.subheader("Import & Export Solutions for Global Trade")
 
 if LOGO_PATH.exists():
     st.image(str(LOGO_PATH), width=220)
 
 st.markdown(
-    """
-    **GJ Global Enterprises** delivers end-to-end import and export services across agriculture, textiles, machinery, and consumer goods.
-    We help businesses move shipments, manage documentation, and maintain transparent order tracking.
+    f"""
+    **{config.get('company_name', 'GJ Global Enterprises')}** delivers end-to-end import and export services across agriculture, textiles, machinery, and consumer goods.
+    {config.get('description', 'We help businesses move shipments, manage documentation, and maintain transparent order tracking.')}
     """
 )
 
-with st.expander("Why choose GJ Global Enterprises?"):
+with st.expander("Why choose us?"):
     st.write(
         "- Efficient customs clearance support for imports and exports\n"
         "- Competitive freight and logistics planning\n"
@@ -125,21 +47,21 @@ nav = st.sidebar.selectbox(
 )
 
 company_info = {
-    "Registered Name": "GJ Global Enterprises",
+    "Registered Name": config.get("company_name", "GJ Global Enterprises"),
     "Business Type": "Import & Export",
     "Headquarters": "India",
     "Core Markets": "Asia, Europe, Africa, Middle East",
     "Primary Goods": "Food Products, Textiles, Machinery, Electronics",
 }
 
-services = [
+services = config.get("services", [
     "Customs Clearance",
     "Freight Forwarding",
     "Supplier Sourcing",
     "Quality Inspection",
     "Warehousing & Distribution",
     "Trade Documentation",
-]
+])
 
 product_catalog = pd.DataFrame(
     [
@@ -302,14 +224,14 @@ elif nav == "Order Tracking":
         st.write("File size:", f"{uploaded_file.size / 1024:.1f} KB")
 
 elif nav == "Contact":
-    st.header("Contact GJ Global Enterprises")
+    st.header("Contact Us")
     st.write("Reach out to our export/import team for pricing, logistics support, and partnership enquiries.")
-    st.write("**Company:** GJ Global Enterprises (Import & Export)")
-    st.write("**Website:** www.gjglobalenterprises.com")
-    st.write("**Email:** gjglobalenterprises26@gmail.com")
-    st.write("**Phone:** 9600610294 / 8870185522")
-    st.write("**Address:** Nethaji street 1st lane, Pichanoor, Gudiyattam, vellore-632602, TN, India")
+    st.write(f"**Company:** {config.get('company_name', 'GJ Global Enterprises')}")
+    st.write(f"**Website:** {config.get('website', '')}")
+    st.write(f"**Email:** {config.get('email', '')}")
+    st.write(f"**Phone:** {config.get('phone', '')}")
+    st.write(f"**Address:** {config.get('address', '')}")
     st.write("Follow us for global trade updates and customs advisory support.")
 
 st.markdown("---")
-st.caption("Built with Streamlit for GJ Global Enterprises (Import & Export)")
+st.caption(f"Built with Streamlit for {config.get('company_name', 'GJ Global Enterprises')}")
