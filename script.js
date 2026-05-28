@@ -33,17 +33,41 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
 const galleryImages = [
     { src: 'Gallery/Grains.jfif', caption: 'Grains & Crops' },
     { src: 'Gallery/Rice and Millets.jfif', caption: 'Rice & Millets' },
+    { src: 'Gallery/TN agri.jfif', caption: 'TN Agriculture' },
+    { src: 'Gallery/spices.jfif', caption: 'Spices' },
     { src: 'Gallery/Fruites.jfif', caption: 'Fresh Fruits' },
     { src: 'Gallery/Vegetables.jfif', caption: 'Vegetables' },
-    { src: 'Gallery/TN agri.jfif', caption: 'TN Agriculture' },
     { src: 'Gallery/Sarees.jfif', caption: 'Traditional Sarees' },
     { src: 'Gallery/Cotton sarees.jfif', caption: 'Cotton Sarees' },
     { src: 'Gallery/Handloom saree.jfif', caption: 'Handloom Sarees' },
     { src: 'Gallery/Handloom.jfif', caption: 'Handloom Products' },
     { src: 'Gallery/Power loom.jfif', caption: 'Power Loom' },
     { src: 'Gallery/Lungi.jfif', caption: 'Traditional Lungi' },
-    { src: 'Gallery/Clothes.jfif', caption: 'Textile Products' }
+    { src: 'Gallery/Clothes.jfif', caption: 'Textile Products' },
+    { src: 'Gallery/hen.jfif', caption: 'Poultry' },
+    { src: 'Gallery/goat.jfif', caption: 'Goat' },
+    { src: 'Gallery/leather.jfif', caption: 'Leather Products' },
+    { src: 'Gallery/kitchen vessels.jfif', caption: 'Kitchen Vessels' },
+    { src: 'Gallery/wooden.jfif', caption: 'Wooden Items' },
+    { src: 'Gallery/plastic item.jfif', caption: 'Plastic Items' },
+    { src: 'Gallery/cosmetics.jfif', caption: 'Cosmetics' }
 ];
+
+// ===== GALLERY CATEGORY FILTER =====
+document.querySelectorAll('.gallery-filters .filter-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+        document.querySelectorAll('.gallery-filters .filter-btn').forEach(b => {
+            const isActive = b === btn;
+            b.classList.toggle('active', isActive);
+            b.setAttribute('aria-selected', isActive);
+        });
+        document.querySelectorAll('.gallery-category').forEach(cat => {
+            const show = filter === 'all' || cat.dataset.category === filter;
+            cat.style.display = show ? '' : 'none';
+        });
+    });
+});
 
 let currentImageIndex = 0;
 
