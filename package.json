@@ -1,0 +1,24 @@
+{
+  "name": "gj-global-enterprises",
+  "version": "1.0.0",
+  "description": "Professional Import/Export Business Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server",
+    "dev": "http-server -c-1",
+    "build": "echo 'No build step needed for static site'",
+    "deploy": "echo 'Deploy using Netlify, Vercel, or GitHub Pages'"
+  },
+  "keywords": [
+    "import",
+    "export",
+    "business",
+    "logistics",
+    "shipping"
+  ],
+  "author": "GJ Global Enterprises",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}

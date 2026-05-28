@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Gallery | GJ Global Enterprises</title>
+    <meta name="description" content="Explore our diverse range of import and export products: grains, rice, fresh fruits, vegetables, sarees, handloom textiles, lungis and more.">
+    <meta name="keywords" content="product gallery, agricultural products, sarees, handloom, lungi, Indian textiles, rice exports">
+    <link rel="canonical" href="https://gjglobalenterprises.com/gallery.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Product Gallery | GJ Global Enterprises">
+    <meta property="og:description" content="A visual tour of the products we import and export globally.">
+    <meta property="og:url" content="https://gjglobalenterprises.com/gallery.html">
+    <meta property="og:image" content="Gallery/Sarees.jfif">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Product Gallery | GJ Global Enterprises">
+    <meta name="twitter:description" content="Agricultural goods, textiles, handloom &amp; more.">
+
+    <link rel="icon" type="image/jpeg" href="logo/GJ.jpeg">
+    <link rel="apple-touch-icon" href="logo/GJ.jpeg">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <nav class="navbar" aria-label="Primary">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo/GJ.jpeg" alt="GJ Global Logo" class="logo-img" width="42" height="42">
+                <span>GJ Global Enterprises</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="trade.html">Trade</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html" class="nav-cta">Get a Quote</a></li>
+            </ul>
+            <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main">
+        <section class="page-header">
+            <div class="container">
+                <h1>Our Product Gallery</h1>
+                <p>Explore the diverse range of import and export goods we move across the world.</p>
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a> &rsaquo; Gallery
+                </nav>
+            </div>
+        </section>
+
+        <section class="gallery" id="gallery">
+            <div class="container">
+                <div class="gallery-grid">
+                    <div class="gallery-item" onclick="openModal('Gallery/Grains.jfif', 'Grains & Crops')">
+                        <img src="Gallery/Grains.jfif" alt="Grains and crops" loading="lazy">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                        <p>Grains &amp; Crops</p>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Gallery/Rice and Millets.jfif', 'Rice & Millets')">
+                        <img src="Gallery/Rice and Millets.jfif" alt="Rice and millets" loading="lazy">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                        <p>Rice &amp; Millets</p>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Gallery/Fruites.jfif', 'Fresh Fruits')">
+                        <img src="Gallery/Fruites.jfif" alt="Fresh fruits" loading="lazy">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                        <p>Fresh Fruits</p>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Gallery/Vegetables.jfif', 'Vegetables')">
+                        <img src="Gallery/Vegetables.jfif" alt="Vegetables" loading="lazy">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                        <p>Vegetables</p>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Gallery/TN agri.jfif', 'Tamil Nadu Agriculture')">
+                        <img src="Gallery/TN agri.jfif" alt="Tamil Nadu agriculture" loading="lazy">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                        <p>TN Agriculture</p>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Gallery/Sarees.jfif', 'Traditional Sarees')">
+                        <img src="Gallery/Sarees.jfif" alt="Traditional sarees" loading="lazy">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                        <p>Sarees</p>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Gallery/Cotton sarees.jfif', 'Cotton Sarees')">
+                        <img src="Gallery/Cotton sarees.jfif" alt="Cotton sarees" loading="lazy">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                        <p>Cotton Sarees</p>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Gallery/Handloom saree.jfif', 'Handloom Sarees')">
+                        <img src="Gallery/Handloom saree.jfif" alt="Handloom sarees" loading="lazy">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                        <p>Handloom Sarees</p>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Gallery/Handloom.jfif', 'Handloom Products')">
+                        <img src="Gallery/Handloom.jfif" alt="Handloom products" loading="lazy">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                        <p>Handloom</p>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Gallery/Power loom.jfif', 'Power Loom')">
+                        <img src="Gallery/Power loom.jfif" alt="Power loom" loading="lazy">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                        <p>Power Loom</p>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Gallery/Lungi.jfif', 'Traditional Lungi')">
+                        <img src="Gallery/Lungi.jfif" alt="Traditional lungi" loading="lazy">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                        <p>Lungi</p>
+                    </div>
+                    <div class="gallery-item" onclick="openModal('Gallery/Clothes.jfif', 'Textile Products')">
+                        <img src="Gallery/Clothes.jfif" alt="Textile products" loading="lazy">
+                        <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                        <p>Clothes</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="imageModal" class="modal" role="dialog" aria-modal="true" aria-label="Image preview">
+            <button class="close" onclick="closeModal()" aria-label="Close">&times;</button>
+            <img class="modal-content" id="modalImage" alt="">
+            <div class="modal-caption" id="modalCaption"></div>
+            <div class="modal-nav">
+                <button class="modal-btn" onclick="changeImage(-1)">&lsaquo; Previous</button>
+                <button class="modal-btn" onclick="changeImage(1)">Next &rsaquo;</button>
+            </div>
+        </div>
+
+        <section class="cta-banner">
+            <div class="container">
+                <h2>Interested in a Product?</h2>
+                <p>Tell us which category and quantity you're looking at. We'll come back with sourcing options and pricing.</p>
+                <div class="hero-actions">
+                    <a href="contact.html" class="btn btn-outline"><i class="fas fa-paper-plane"></i> Request a Quote</a>
+                    <a href="https://wa.me/919600610294" target="_blank" rel="noopener" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>GJ Global Enterprises</h4>
+                    <p>Your trusted partner in international trade. Licensed exporter serving 15+ countries from Tamil Nadu, India.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/gjglobalenterprises" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/gjglobalenterprises" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/gjglobalenterprises" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Our Services</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Trade</h4>
+                    <ul>
+                        <li><a href="trade.html">Import &amp; Export</a></li>
+                        <li><a href="services.html#scm">Supply Chain (SCM)</a></li>
+                        <li><a href="gallery.html">Product Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+919600610294" style="color: rgba(255,255,255,0.85);">+91 9600610294</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:gjglobalenterprises26@gmail.com" style="color: rgba(255,255,255,0.85);">gjglobalenterprises26@gmail.com</a></p>
+                    <p><i class="fas fa-map-marker-alt"></i> Gudiyattam, Vellore-632602, TN</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 GJ Global Enterprises. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/919600610294" target="_blank" rel="noopener" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <button class="scroll-top" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - GJ Global Enterprises</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .thank-you-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        .thank-you-card {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: slideIn 0.5s ease-out;
+        }
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: #10b981;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            animation: scaleIn 0.5s ease-out 0.2s backwards;
+        }
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        .success-icon i {
+            color: white;
+            font-size: 40px;
+        }
+        .thank-you-card h1 {
+            color: #1f2937;
+            margin-bottom: 15px;
+            font-size: 2.5rem;
+        }
+        .thank-you-card p {
+            color: #6b7280;
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        .submission-details {
+            background: #f9fafb;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        .submission-details h3 {
+            color: #1f2937;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            text-align: center;
+        }
+        .detail-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        .detail-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        .detail-label {
+            font-weight: 600;
+            color: #4b5563;
+            margin-bottom: 5px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .detail-value {
+            color: #1f2937;
+            font-size: 1.05rem;
+            word-break: break-word;
+        }
+        .btn-home {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-top: 20px;
+        }
+        .btn-home:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+        }
+        .contact-info-box {
+            background: #eff6ff;
+            border-left: 4px solid #3b82f6;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 5px;
+            text-align: left;
+        }
+        .contact-info-box h4 {
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+        .contact-info-box p {
+            color: #1e40af;
+            margin: 5px 0;
+            font-size: 0.95rem;
+        }
+        .contact-info-box a {
+            color: #2563eb;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .contact-info-box a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <section class="thank-you-section">
+        <div class="thank-you-card">
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            <h1>Thank You!</h1>
+            <p>Your message has been successfully submitted. We've received your inquiry and will get back to you as soon as possible.</p>
+            
+            <div class="submission-details" id="submissionDetails">
+                <h3>Your Submission Details</h3>
+                <div class="detail-item">
+                    <div class="detail-label">Name</div>
+                    <div class="detail-value" id="displayName">-</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Email</div>
+                    <div class="detail-value" id="displayEmail">-</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Subject</div>
+                    <div class="detail-value" id="displaySubject">-</div>
+                </div>
+                <div class="detail-item">
+                    <div class="detail-label">Message</div>
+                    <div class="detail-value" id="displayMessage">-</div>
+                </div>
+            </div>
+
+            <div class="contact-info-box">
+                <h4><i class="fas fa-info-circle"></i> Need Immediate Assistance?</h4>
+                <p><i class="fas fa-phone"></i> Call us: <a href="tel:+919600610294">+91 9600610294</a> or <a href="tel:+918870185522">+91 8870185522</a></p>
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:gjglobalenterprises26@gmail.com">gjglobalenterprises26@gmail.com</a></p>
+            </div>
+
+            <a href="index.html" class="btn-home">
+                <i class="fas fa-home"></i> Return to Home
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Get URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        
+        // Display the submitted data
+        document.getElementById('displayName').textContent = urlParams.get('name') || 'Not provided';
+        document.getElementById('displayEmail').textContent = urlParams.get('email') || 'Not provided';
+        document.getElementById('displaySubject').textContent = urlParams.get('customer_subject') || 'Not provided';
+        document.getElementById('displayMessage').textContent = urlParams.get('message') || 'Not provided';
+
+        // Log the submission (for debugging/tracking)
+        console.log('Form submission received:', {
+            name: urlParams.get('name'),
+            email: urlParams.get('email'),
+            subject: urlParams.get('customer_subject'),
+            message: urlParams.get('message'),
+            timestamp: new Date().toISOString()
+        });
+    </script>
+</body>
+</html>
