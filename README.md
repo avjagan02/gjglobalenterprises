@@ -91,7 +91,7 @@ The site ships with placeholder values for production-only details. Search for t
 3. **Testimonials** ([index.html](index.html)) — three placeholder client quotes (Rajesh Kumar, Sara Al-Mansouri, James Tan). Replace with real customers when available.
 4. **Accreditation registration numbers** ([about.html](about.html)) — the cards say "MSME Registered / IEC Approved / GST Registered" but you can add actual reg numbers under each `<small>` line for stronger trust signals.
 5. **WhatsApp number** — currently hard-coded as `+91 9600610294` (used in `wa.me/919600610294` links). Search & replace if it changes.
-6. **OG image** — falls back to `logo/GJ.jpeg`. A 1200×630 banner image would render better on social previews.
+6. **OG image** — falls back to `logo/GJ.png`. A 1200×630 banner image would render better on social previews.
 
 ## Tech Notes
 

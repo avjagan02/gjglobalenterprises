@@ -18,8 +18,8 @@
     <meta name="twitter:title" content="Product Gallery | GJ Global Enterprises">
     <meta name="twitter:description" content="Agricultural goods, textiles, handloom &amp; more.">
 
-    <link rel="icon" type="image/jpeg" href="logo/GJ.jpeg">
-    <link rel="apple-touch-icon" href="logo/GJ.jpeg">
+    <link rel="icon" type="image/png" href="logo/GJ.png">
+    <link rel="apple-touch-icon" href="logo/GJ.png">
 
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
@@ -31,7 +31,7 @@
     <nav class="navbar" aria-label="Primary">
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="logo/GJ.jpeg" alt="GJ Global Logo" class="logo-img" width="42" height="42">
+                <img src="logo/GJ.png" alt="GJ Global Logo" class="logo-img" width="42" height="42">
                 <span>GJ Global Enterprises</span>
             </a>
             <ul class="nav-menu">
@@ -66,6 +66,7 @@
                     <button class="filter-btn" data-filter="agriculture" role="tab" aria-selected="false">Agriculture &amp; Grains</button>
                     <button class="filter-btn" data-filter="produce" role="tab" aria-selected="false">Fresh Produce</button>
                     <button class="filter-btn" data-filter="textiles" role="tab" aria-selected="false">Textiles &amp; Apparel</button>
+                    <button class="filter-btn" data-filter="lungi" role="tab" aria-selected="false">Lungi Collection</button>
                     <button class="filter-btn" data-filter="livestock" role="tab" aria-selected="false">Livestock &amp; Poultry</button>
                     <button class="filter-btn" data-filter="leather" role="tab" aria-selected="false">Leather</button>
                     <button class="filter-btn" data-filter="home" role="tab" aria-selected="false">Home &amp; Kitchen</button>
@@ -151,6 +152,17 @@
                             <img src="Gallery/Clothes.jfif" alt="Textile products" loading="lazy">
                             <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
                             <p>Clothes</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="gallery-category" data-category="lungi">
+                    <h2 class="category-heading"><i class="fas fa-socks"></i> Lungi Collection</h2>
+                    <div class="gallery-grid">
+                        <div class="gallery-item" onclick="openModal('Lungi/lungi-collection.png', 'Lungi Collection')">
+                            <img src="Lungi/lungi-collection.png" alt="Lungi collection" loading="lazy">
+                            <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+                            <p>Lungi Collection</p>
                         </div>
                     </div>
                 </div>

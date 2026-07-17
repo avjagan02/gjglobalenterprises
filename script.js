@@ -44,6 +44,7 @@ const galleryImages = [
     { src: 'Gallery/Power loom.jfif', caption: 'Power Loom' },
     { src: 'Gallery/Lungi.jfif', caption: 'Traditional Lungi' },
     { src: 'Gallery/Clothes.jfif', caption: 'Textile Products' },
+    { src: 'Lungi/lungi-collection.png', caption: 'Lungi Collection' },
     { src: 'Gallery/hen.jfif', caption: 'Poultry' },
     { src: 'Gallery/goat.jfif', caption: 'Goat' },
     { src: 'Gallery/leather.jfif', caption: 'Leather Products' },
